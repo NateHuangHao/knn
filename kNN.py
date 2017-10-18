@@ -1,3 +1,4 @@
+# encoding: utf-8
 from numpy import *
 from os import listdir
 import operator
@@ -97,13 +98,13 @@ def handwritingClassTest():
         classifierResult = classify0(vectorUnderTest, trainingMat, hwLabels, 3)
 
         # 打印KNN算法分类结果和真实的分类
-        print ("模型判断结果为: %d, 真实数据为: %d，测试数据文件名为：%s" % (classifierResult, classNumStr, fileNameStr))
+        print u'模型判断结果为: %d, 真实数据为: %d，测试数据文件名为：%s' % (classifierResult, classNumStr, fileNameStr)
 
         # 判断KNN算法结果是否准确
         if (classifierResult != classNumStr): errorCount += 1.0
 
     # 打印错误率
-    print ("\n错误次数: %d" % errorCount)
-    print ("\n错误率： %f" % (errorCount/float(mTest)))
+    print u'\n错误次数: %d' % errorCount
+    print u'\n错误率： %f' % (errorCount/float(mTest))
 
 handwritingClassTest()
